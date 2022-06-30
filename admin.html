@@ -4,11 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./product-slider/style.css">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/admin.css">
+    <title>Listing-Admin</title>
 </head>
 <body>
-    
-    
+    <div class="container">
+        <div class="row">
+            <div class="row text-center">
+                <div class="col-md-12 mt-5 mb-4">
+                    <h1>Products</h1>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h6>By Type</h6>
+                <select name="FilterByProperty" id="FilterByProperty">
+                    <option value="Any">All</option>
+                    <option value="Apartment">Bag</option>
+                    <option value="Villa">Clothing</option>
+                    <option value="Single Family Home">Socks</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <h6>By Price</h6>
+                <select name="FilterByPrice" id="FilterByPrice" onchange="filterByPrice(event)">
+                    <option value="Any">All</option>
+                    <option value="<300">Below R300</option>
+                    <option value=">300">Above R300</option>
+                </select>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Actual Price</th>
+                            <th scope="col">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableContainer">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- <div class="modals">
+            <div id="modalBackground" class="row justify-content-center align-items-center h-100">
+                <div class="row">
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f918659fbc.js" crossorigin="anonymous"></script>
+    <script src="./scripts/admin.js"></script>
 </body>
 </html>
